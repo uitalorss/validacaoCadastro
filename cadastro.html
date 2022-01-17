@@ -10,13 +10,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/reset.css">
   <link rel="stylesheet" href="assets/css/style.css">
-  <title>Formulário - Login</title>
+  <title>Formulário - Cadastro</title>
 </head>
 
 <body>
   <div class="container">
-    <div class="card">
-      <h2>Login</h2>
+    <div class="card cadastro">
+      <h2>Cadastro</h2>
+      <div class="label-float">
+        <input type="text" id="nome" placeholder="" required>
+        <label for="nome">Nome</label>
+      </div>
       <div class="label-float">
         <input type="text" id="user" placeholder="" required>
         <label for="user">Usuário</label>
@@ -25,13 +29,13 @@
         <input type="password" id="senha" placeholder="" required>
         <label for="senha">Senha</label>
       </div>
+      <div class="label-float">
+        <input type="password" id="confirma-senha" placeholder="" required>
+        <label for="confirma-senha">Confirmar Senha</label>
+      </div>
       <div class="justify-center">
-        <button>Entrar</button>
+        <button>Cadastrar</button>
       </div>
-      <div class="justity-center">
-        <hr>
-      </div>
-      <p>Não tem uma conta? <a href="cadastro.html">Cadastre-se</a></p>
     </div>
   </div>
 </body>

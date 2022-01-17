@@ -118,3 +118,21 @@ a {
   right: 10px;
   cursor: pointer;
 }
+
+.msgError {
+  text-align: center;
+  color: red;
+  background-color: #ffbbbb;
+  padding: 10px;
+  border-radius: 4px;
+  display: none;
+}
+
+.msgSuccess {
+  text-align: center;
+  color: green;
+  background-color: #bbffbe;
+  padding: 10px;
+  border-radius: 4px;
+  display: none;
+}

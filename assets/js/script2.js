@@ -25,7 +25,6 @@ const entrar = () =>{
   }
 
   lista_user = JSON.parse(localStorage.getItem('lista_user'))
-
   lista_user.forEach((item) => {
     if(user.value === item.user && senha.value === item.senha){
       userValid = {
@@ -42,7 +41,7 @@ const entrar = () =>{
     msgError.setAttribute('style', 'display: none');
     let token = Math.random().toString(16).substring(2);
     localStorage.setItem('token', token);
-    console.log(token)
+    localStorage.setItem('userLogado', JSON.stringify(userValid));
   }else{
     labelUser.setAttribute('style', 'color: red');
     user.setAttribute('style', 'border-color: red');

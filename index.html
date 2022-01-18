@@ -20,18 +20,17 @@
       <h2>Login</h2>
 
       <div class="msgError"></div>
-      <div class="msgSuccess"></div>
       <div class="label-float">
         <input type="text" id="user" placeholder="" required>
-        <label for="user">Usuário</label>
+        <label id="labelUser" for="user">Usuário</label>
       </div>
       <div class="label-float">
         <input type="password" id="senha" placeholder="" required>
-        <label for="senha">Senha</label>
+        <label id="labelSenha" for="senha">Senha</label>
         <i id="verSenha" class="fa fa-eye" aria-hidden="true"></i>
       </div>
       <div class="justify-center">
-        <button>Entrar</button>
+        <button onclick="entrar()">Entrar</button>
       </div>
       <div class="justity-center">
         <hr>
@@ -40,7 +39,7 @@
     </div>
   </div>
 
-  <script src="assets/js/script.js"></script>
+  <script src="assets/js/script2.js"></script>
 </body>
 
 </html>

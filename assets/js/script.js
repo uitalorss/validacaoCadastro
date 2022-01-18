@@ -118,3 +118,7 @@ const cadastrar = () => {
     msgError.innerHTML = '<p>Preencha todos os campos corretamente.</p>'
   }
 }
+
+const entrar = () =>{
+  alert("Tá funcionando");
+}

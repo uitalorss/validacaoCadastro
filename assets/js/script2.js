@@ -17,6 +17,8 @@ const entrar = () =>{
   let labelSenha = document.querySelector("#labelSenha");
 
   let msgError = document.querySelector(".msgError");
+
+
   let lista_user = [];
   let userValid = {
     nome: '',
@@ -25,6 +27,8 @@ const entrar = () =>{
   }
 
   lista_user = JSON.parse(localStorage.getItem('lista_user'))
+  
+  //Verifica se o usuário e senha digitados existem no localStorage
   lista_user.forEach((item) => {
     if(user.value === item.user && senha.value === item.senha){
       userValid = {
@@ -35,12 +39,14 @@ const entrar = () =>{
     }
   })
 
-
+  //tratamento para login
   if(user.value === userValid.user && senha.value === userValid.senha){
     window.location.href = 'dashboard.html';
     msgError.setAttribute('style', 'display: none');
+    //Atribuindo token de validação
     let token = Math.random().toString(16).substring(2);
     localStorage.setItem('token', token);
+    //Passando informações de quem está logando para o localStorage
     localStorage.setItem('userLogado', JSON.stringify(userValid));
   }else{
     labelUser.setAttribute('style', 'color: red');

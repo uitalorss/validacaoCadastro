@@ -21,6 +21,8 @@ let validConfirmaSenha = false;
 let msgError = document.querySelector(".msgError");
 let msgSucess = document.querySelector(".msgSuccess");
 
+
+//Tratamento para olhar valores do campo senha ao clicar no botão
 verSenha.addEventListener('click', () => {
   let inputSenha = document.querySelector('#senha');
   if(inputSenha.getAttribute('type') === 'password'){
@@ -30,6 +32,7 @@ verSenha.addEventListener('click', () => {
   }
 })
 
+//Tratamento para olhar valores do campo confirma senha ao clicar no botão
 verConfirmaSenha.addEventListener('click', () => {
   let inputSenha = document.querySelector('#confirma-senha');
   if(inputSenha.getAttribute('type') === 'password'){
@@ -38,6 +41,7 @@ verConfirmaSenha.addEventListener('click', () => {
     inputSenha.setAttribute('type', 'password')
   }
 })
+
 
 nome.addEventListener('keyup', () => {
   if(nome.value.length <= 5){
@@ -97,12 +101,15 @@ confirmaSenha.addEventListener('keyup', () => {
 
 const cadastrar = () => {
   if(validNome && validUser && validSenha && validConfirmaSenha){
-    let lista_user = JSON.parse(localStorage.getItem('lista_user') || '[]')
+    //atribuindo a uma variavel local os valores de localStorage
+    let lista_user = JSON.parse(localStorage.getItem('lista_user') || '[]');
+    //salvando os valores digitados no formulario como um objeto na lista de usuarios
     lista_user.push({
       nome: nome.value,
       user: user.value,
       senha: senha.value
     });
+    //salvando a nova lista de usuarios no localstorage
     localStorage.setItem('lista_user', JSON.stringify(lista_user));
     msgSucess.setAttribute('style', 'display: block');
     msgError.setAttribute('style', 'display: none');
@@ -117,8 +124,4 @@ const cadastrar = () => {
     msgSucess.setAttribute('style', 'display: none');
     msgError.innerHTML = '<p>Preencha todos os campos corretamente.</p>'
   }
-}
-
-const entrar = () =>{
-  alert("Tá funcionando");
 }

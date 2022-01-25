@@ -15,4 +15,4 @@ const sair = () =>{
 }
 
  let boasVindas = document.querySelector('.boas-vindas');
- boasVindas.innerHTML = `<p>Bem vindo, ${userLogado.nome}!!</p>`
+ boasVindas.innerHTML = `<p>Bem vindo, ${userLogado.nome}!! Em breve você poderá acessar nosso dashboard para aproveitar ao máximo nossos serviços.</p>`

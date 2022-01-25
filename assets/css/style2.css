@@ -1,33 +1,26 @@
 body {
   font-family: 'Sora', sans-serif;
-  background: url(../img/bg2.jpeg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
+  color: #636e72;
+  box-sizing: border-box;
 }
 
 .boas-vindas {
-  padding: 20px;
-}
-
-.boas-vindas p {
-  color: #ffffff;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 30px;
 }
 
 button {
-  margin-left: 20px;
-  background-color: #7f8c8d;
+  background-color: #2d3436;
   border: none;
   font-size: 1em;
-  color: #2c3e50;
+  color: #ffffff;
   padding: 10px 20px;
-  margin-top: 15px;
   border-radius: 5%;
   cursor: pointer;
   transition: 0.1s ease-in;
 }
 
 button:hover {
-  background-color: #2c3e50;
-  color: #7f8c8d;
+  background-color: #636e72;
 }

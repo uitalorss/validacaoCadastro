@@ -113,7 +113,7 @@ const cadastrar = () => {
     localStorage.setItem('lista_user', JSON.stringify(lista_user));
     msgSucess.setAttribute('style', 'display: block');
     msgError.setAttribute('style', 'display: none');
-    msgSucess.innerHTML = '<p>Cadastrado com sucesso</p>';
+    msgSucess.innerHTML = '<p>Cadastrado com sucesso!!</p>' + '<p>Você será redirecionado...</p>';
 
     setTimeout(() => {
       window.location.href = 'index.html';

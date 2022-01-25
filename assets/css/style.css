@@ -27,6 +27,7 @@ body {
 .justify-center {
   display: flex;
   justify-content: center;
+  gap: 2em;
 }
 
 h2 {
@@ -105,6 +106,7 @@ p {
   text-align: center;
   font-size: 1em;
   color: #636e72;
+  line-height: 1.5em;
 }
 
 a {

@@ -39,6 +39,16 @@ const entrar = () =>{
     }
   })
 
+  const errorAuth = () => {
+    labelUser.setAttribute('style', 'color: red');
+    user.setAttribute('style', 'border-color: red');
+    labelSenha.setAttribute('style', 'color: red');
+    senha.setAttribute('style', 'border-color: red')
+    msgError.setAttribute('style', 'display: block');
+    msgError.innerHTML = '<p>Usuário e/ou senha incorretos.</p>'
+    user.focus();
+  }
+
   //tratamento para login
   if(user.value === userValid.user && senha.value === userValid.senha){
     window.location.href = 'dashboard.html';
@@ -49,12 +59,7 @@ const entrar = () =>{
     //Passando informações de quem está logando para o localStorage
     localStorage.setItem('userLogado', JSON.stringify(userValid));
   }else{
-    labelUser.setAttribute('style', 'color: red');
-    user.setAttribute('style', 'border-color: red');
-    labelSenha.setAttribute('style', 'color: red');
-    senha.setAttribute('style', 'border-color: red')
-    msgError.setAttribute('style', 'display: block');
-    msgError.innerHTML = '<p>Usuário e/ou senha incorretos.</p>'
-    user.focus();
+    errorAuth();
   }
 }
+
